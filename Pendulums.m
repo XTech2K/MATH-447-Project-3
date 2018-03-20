@@ -7,6 +7,12 @@
 % (Problem 6.3.6 asks you to make the inverted pendulum stable through parametric resonance. 
 % Problem 6.3.8 asks you to build the double pendulum.) 
 % For a grand finale, try to stabilize the double pendulum.
+%% Extra
+% Here is the code for the first steps of the pendulum problem.
+%% 
+% <pend.html Initial Pend Code>
+%%
+% <pend_damp.html Pend: Damped Version>
 %% 6.3.4
 % Adapt pend.m to build a forced, damped version of the pendulum. 
 % Run the Trapezoid Method in the following: (a) Set damping d = 1 and the forcing parameter A = 10. 
@@ -39,7 +45,8 @@
 % Run the forced damped pendulum as in Computer Problem 4, but set A=12. 
 % Use the Trapezoid Method with h = 0.005. 
 % There are now two periodic attractors that are mirror images of one another. 
-% Describe the two attracting trajectories, and find two initial conditions (y1, y2) = (a,0) and (b,0), where |a ? b| ? 0.1, that are attracted to different periodic trajectories. 
+% Describe the two attracting trajectories, and find two initial conditions 
+% (y1, y2) = (a,0) and (b,0), where |a ? b| ? 0.1, that are attracted to different periodic trajectories. 
 % Set A = 15 to view chaotic motion of the forced damped pendulum.
 %%
 % Code: <pend_force.html Forced Damped Pendulum>
@@ -71,10 +78,12 @@
 %%
 % Following the pattern used to create the 2 equations for a
 % regular pendulum, we get this set of equations:
-% y'' + dy' + (g/l + Acos(2 pi t)) * sin(y) = 0
-% y'' = -dy' - (g/l + Acos(2 pi t)) * sin(y)
-% y1' = y2
-% y2' = -dy2 - (g/l + Acos(2 pi t)) * sin(y1)
+%%
+%       y'' + dy' + (g/l + Acos(2 pi t)) * sin(y) = 0
+%       y'' = -dy' - (g/l + Acos(2 pi t)) * sin(y)
+%       y1' = y2
+%       y2' = -dy2 - (g/l + Acos(2 pi t)) * sin(y1)
+%%
 % The range of A values for which the inverted pendulum is stable
 % cannot be calculated exactly, as the inverted pendulum could
 % become unstable at any point in the future, even very far
@@ -90,10 +99,10 @@
 % the other effect of parametric resonance: The stable equilibrium
 % can become unstable with an oscillating pivot.
 %%
-% n = 0.02s, t = 20s -> L = 13.69
-% n = 0.01s, t = 20s -> L = 13.69
-% n = 0.01s, t = 40s -> L = 13.18
-% n = 0.01s, t = 100s-> L = 13.00
-% n = 0.01s, t = 200s-> L = 12.96
+%       n = 0.02s, t = 20s -> L = 13.69
+%       n = 0.01s, t = 20s -> L = 13.69
+%       n = 0.01s, t = 40s -> L = 13.18
+%       n = 0.01s, t = 100s-> L = 13.00
+%       n = 0.01s, t = 200s-> L = 12.96
 %% 6.3.8
 % Adapt pend.m to build the double pendulum.
