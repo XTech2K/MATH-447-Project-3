@@ -37,4 +37,36 @@
 % about 2.5 rotations. The difference in initial conditions can change both
 % where the bob stops as well as whether the rotations are clockwise versus
 % counterclockwise
+%% 6.3.6
+% Adapt pend.m to build a damped pendulum with oscillating pivot.
+% The goal is to investigate the phenomenon of parametric
+% resonance, by which the inverted pendulum becomes stable!
 %%
+% Following the pattern used to create the 2 equations for a
+% regular pendulum, we get this set of equations:
+% y'' + dy' + (g/l + Acos(2 pi t)) * sin(y) = 0
+% y'' = -dy' - (g/l + Acos(2 pi t)) * sin(y)
+% y1' = y2
+% y2' = -dy2 - (g/l + Acos(2 pi t)) * sin(y1)
+% The range of A values for which the inverted pendulum is stable
+% cannot be calculated exactly, as the inverted pendulum could
+% become unstable at any point in the future, even very far
+% off. Our estimated results are as follows, correct to the
+% hundredths place.
+% n = 0.02s, t = 20s -> L = 18.32, H = 25.19
+% n = 0.01s, t = 20s -> L = 18.35, H = 25.23
+% n = 0.01s, t = 40s -> L = 18.36, H = 25.01
+% n = 0.01s, t = 100s-> L = 18.36, H = 24.89
+% n = 0.01s, t = 200s-> L = 18.36, H = 24.82
+%% 6.3.7
+% Use the parameter settings of Computer Problem 6 to demonstrate
+% the other effect of parametric resonance: The stable equilibrium
+% can become unstable with an oscillating pivot.
+%%
+% n = 0.02s, t = 20s -> L = 13.69
+% n = 0.01s, t = 20s -> L = 13.69
+% n = 0.01s, t = 40s -> L = 13.18
+% n = 0.01s, t = 100s-> L = 13.00
+% n = 0.01s, t = 200s-> L = 18.36
+%% 6.3.8
+% Adapt pend.m to build the double pendulum.
