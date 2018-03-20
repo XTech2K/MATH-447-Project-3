@@ -67,6 +67,6 @@
 % n = 0.01s, t = 20s -> L = 13.69
 % n = 0.01s, t = 40s -> L = 13.18
 % n = 0.01s, t = 100s-> L = 13.00
-% n = 0.01s, t = 200s-> L = 18.36
+% n = 0.01s, t = 200s-> L = 12.96
 %% 6.3.8
 % Adapt pend.m to build the double pendulum.
